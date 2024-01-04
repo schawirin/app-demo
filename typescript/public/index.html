@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Teste API Node.js</title>
+</head>
+<body>
+    <h1>API is working</h1>
+    <button id="logButton">Gerar Log</button>
+    <script>
+        document.getElementById('logButton').addEventListener('click', function() {
+            fetch('/generate-log')
+                .then(response => response.json())
+                .then(data => console.log(data.message));
+        });
+    </script>
+</body>
+</html>
+

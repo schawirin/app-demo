@@ -1,0 +1,12 @@
+// No arquivo tracer.ts ou similar
+import tracer from 'dd-trace';
+
+tracer.init({
+  env: process.env.DD_ENV,
+  service: process.env.DD_SERVICE,
+  version: process.env.DD_VERSION,
+  // Outras configurações, se necessário
+});
+
+export default tracer;
+
